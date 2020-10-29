@@ -1,0 +1,2 @@
+# coopboxapi
+API for Coopboxes
