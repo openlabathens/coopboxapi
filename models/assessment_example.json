@@ -1,0 +1,1049 @@
+{
+  "name": "Ένταξη Ανέργων",
+  "__v": 0,
+  "focus": "Εκπαιδευτικά προγράμματα",
+  "type": "past",
+  "timeperiod": 1,
+  "timeperiod_assess": 1,
+  "audience": "Εσωτερική χρήση.",
+  "decisions": "Στρατηγικές αποφάσεις του οργανισμού.",
+  "overview_problem": "Καταπολέμηση νεανικής ανεργίας",
+  "overview_solution": "Εξειδικευμένη Εκπαίδευση",
+  "stakeholders": [
+    {
+      "stakeholder_members": 1000,
+      "stakeholder_title": "Συμμετέχοντες Προγράμματος Ανεργίας",
+      "_id": "5a9d0d432f2c460014557a75",
+      "segments": [
+        {
+          "negative_impact": -393.75,
+          "positive_impact": 588.75,
+          "segment_members": 200,
+          "segment_title": "Άνδρες 16-18 που ζουν σε αστικές περιοχές",
+          "_id": "5a9d0d432f2c460014557a7c",
+          "actions": [
+            {
+              "action_years": 2,
+              "action_people": 125,
+              "action_measure_change": "Αυτοσχέδια κλίμακα 1-5",
+              "action_defined_outcome": "Ικανοποίηση από την εξεύρεση εργασίας",
+              "_id": "5a9d0d432f2c460014557a7d",
+              "action_influence": "positive",
+              "action_others_contributed": "Οικογένεια",
+              "action_change_without": 0.5,
+              "action_others_contribution": 0.5,
+              "action_importance": 9,
+              "impact": 562.5
+            },
+            {
+              "action_years": 2,
+              "action_measure_change": "Αυτοσχέδια κλίμακα 1-5",
+              "action_people": 75,
+              "_id": "5a9d0fc52f2c460014557a8d",
+              "action_defined_outcome": "Αυξημένο άγχος σε αυτούς που δεν βρήκαν εργασία",
+              "action_influence": "negative",
+              "action_others_contributed": "Οικογένεια",
+              "action_change_without": 0.25,
+              "action_others_contribution": 0.5,
+              "action_importance": 7,
+              "impact": -393.75
+            },
+            {
+              "action_years": 1,
+              "action_measure_change": "Warwick-Edinburgh κλίμακα ψυχικής υγείας",
+              "action_people": 70,
+              "_id": "5a9d0fc52f2c460014557a8c",
+              "action_defined_outcome": "Βελτιωμένη ψυχική υγεία",
+              "action_influence": "positive",
+              "action_others_contributed": "Οικογένεια",
+              "action_change_without": 0.5,
+              "action_others_contribution": 0.75,
+              "action_importance": 3,
+              "impact": 26.25
+            }
+          ],
+          "action_inter_outcome": [
+            "Αυξημένη αυτοπεποίθηση για ανεύρεση εργασίας",
+            "Κοινωνικοποίηση συμμετεχόντων",
+            "Μειωμένος χρόνος για την οικογένεια"
+          ],
+          "action_output": [
+            "10 εκπαιδευτικές συνεδρίες και 2 νέες δεξιότητες"
+          ],
+          "action_title": [
+            "Εκπαιδευτικά Προγράμματα σε νέους ανέργους"
+          ],
+          "positive_names": [
+            "Ικανοποίηση από\nτην εξεύρεση\nεργασίας",
+            "Βελτιωμένη ψυχική\nυγεία"
+          ],
+          "negative_names": [
+            "Αυξημένο\nάγχος σε\nαυτούς που\nδεν βρήκαν\nεργασία"
+          ],
+          "positive_impacts": [
+            {
+              "value": 562.5,
+              "name": "Ικανοποίηση από\nτην εξεύρεση\nεργασίας"
+            },
+            {
+              "value": 26.25,
+              "name": "Βελτιωμένη ψυχική\nυγεία"
+            }
+          ],
+          "negative_impacts": [
+            {
+              "value": 393.75,
+              "name": "Αυξημένο\nάγχος σε\nαυτούς που\nδεν βρήκαν\nεργασία"
+            }
+          ],
+          "chartPositive": {
+            "tooltip": {
+              "show": false,
+              "trigger": "item",
+              "formatter": "{a} <br/>{b} : {c} ({d}%)"
+            },
+            "legend": {
+              "x": "center",
+              "y": "250",
+              "data": [
+                "Ικανοποίηση από\nτην εξεύρεση\nεργασίας",
+                "Βελτιωμένη ψυχική\nυγεία"
+              ]
+            },
+            "toolbox": {
+              "show": true,
+              "feature": {
+                "restore": {
+                  "show": true,
+                  "title": "Επαναφορά"
+                },
+                "saveAsImage": {
+                  "show": true,
+                  "title": "Αποθήκευση ως εικόνα"
+                }
+              }
+            },
+            "calculable": true,
+            "series": [
+              {
+                "name": "Radius model",
+                "type": "pie",
+                "radius": [
+                  20,
+                  80
+                ],
+                "center": [
+                  "50%",
+                  100
+                ],
+                "roseType": "radius",
+                "width": "100%",
+                "max": 40,
+                "itemStyle": {
+                  "normal": {
+                    "label": {
+                      "show": false
+                    },
+                    "labelLine": {
+                      "show": false
+                    }
+                  },
+                  "emphasis": {
+                    "label": {
+                      "show": true
+                    },
+                    "labelLine": {
+                      "show": true
+                    }
+                  }
+                },
+                "data": [
+                  {
+                    "value": 562.5,
+                    "name": "Ικανοποίηση από\nτην εξεύρεση\nεργασίας"
+                  },
+                  {
+                    "value": 26.25,
+                    "name": "Βελτιωμένη ψυχική\nυγεία"
+                  }
+                ]
+              }
+            ]
+          },
+          "hasPositive": true,
+          "chartNegative": {
+            "tooltip": {
+              "show": false,
+              "trigger": "item",
+              "formatter": "{a} <br/>{b} : {c} ({d}%)"
+            },
+            "legend": {
+              "x": "center",
+              "y": "250",
+              "data": [
+                "Αυξημένο\nάγχος σε\nαυτούς που\nδεν βρήκαν\nεργασία"
+              ]
+            },
+            "toolbox": {
+              "show": false,
+              "feature": {
+                "restore": {
+                  "show": true,
+                  "title": "restore"
+                },
+                "saveAsImage": {
+                  "show": true,
+                  "title": "save as image"
+                }
+              }
+            },
+            "calculable": true,
+            "series": [
+              {
+                "name": "Radius model",
+                "type": "pie",
+                "radius": [
+                  20,
+                  80
+                ],
+                "center": [
+                  "50%",
+                  100
+                ],
+                "roseType": "radius",
+                "width": "100%",
+                "max": 40,
+                "itemStyle": {
+                  "normal": {
+                    "label": {
+                      "show": false
+                    },
+                    "labelLine": {
+                      "show": false
+                    }
+                  },
+                  "emphasis": {
+                    "label": {
+                      "show": true
+                    },
+                    "labelLine": {
+                      "show": true
+                    }
+                  }
+                },
+                "data": [
+                  {
+                    "value": 393.75,
+                    "name": "Αυξημένο\nάγχος σε\nαυτούς που\nδεν βρήκαν\nεργασία"
+                  }
+                ]
+              }
+            ]
+          },
+          "hasNegative": true,
+          "$$hashKey": "object:23"
+        },
+        {
+          "negative_impact": -157.5,
+          "positive_impact": 1987.5,
+          "segment_members": 200,
+          "segment_title": "Άνδρες 16-18 που ζουν σε αγροτικές περιοχές",
+          "_id": "5a9d0d432f2c460014557a7a",
+          "actions": [
+            {
+              "action_years": 2,
+              "action_people": 170,
+              "action_measure_change": "Αυτοσχέδια κλίμακα 1-5",
+              "action_defined_outcome": "Ικανοποίηση από την εξεύρεση εργασίας",
+              "_id": "5a9d0d432f2c460014557a7b",
+              "action_influence": "positive",
+              "action_others_contributed": "Οικογένεια και άλλοι οργανισμοί",
+              "action_change_without": 0.25,
+              "action_others_contribution": 0.25,
+              "action_importance": 10,
+              "impact": 1912.5
+            },
+            {
+              "action_years": 2,
+              "action_people": 30,
+              "action_measure_change": "Αυτοσχέδια κλίμακα 1-5",
+              "_id": "5a9d0fc52f2c460014557a8b",
+              "action_defined_outcome": "Αυξημένο άγχος σε αυτούς που δεν βρήκαν εργασία",
+              "action_influence": "negative",
+              "action_others_contributed": "Οικογένεια και άλλοι οργανισμοί",
+              "action_change_without": 0.25,
+              "action_others_contribution": 0.5,
+              "action_importance": 7,
+              "impact": -157.5
+            },
+            {
+              "action_years": 1,
+              "action_people": 100,
+              "action_measure_change": "Warwick-Edinburgh κλίμακα ψυχικής υγείας",
+              "_id": "5a9d0fc52f2c460014557a8a",
+              "action_defined_outcome": "Βελτιωμένη ψυχική υγεία",
+              "action_influence": "positive",
+              "action_others_contributed": "Οικογένεια και άλλοι οργανισμοί",
+              "action_change_without": 0.25,
+              "action_others_contribution": 0.5,
+              "action_importance": 2,
+              "impact": 75
+            }
+          ],
+          "action_inter_outcome": [
+            "Αυξημένη αυτοπεποίθηση για ανεύρεση εργασίας",
+            "Κοινωνικοποίηση συμμετεχόντων",
+            "Έμαθαν πώς να αντιμετωπίζουν καλύτερα τις καταστάσεις"
+          ],
+          "action_output": [
+            "10 εκπαιδευτικές συνεδρίες και 4 νέες δεξιότητες"
+          ],
+          "action_title": [
+            "Εκπαιδευτικά Προγράμματα σε νέους ανέργους"
+          ],
+          "positive_names": [
+            "Ικανοποίηση από\nτην εξεύρεση\nεργασίας",
+            "Βελτιωμένη ψυχική\nυγεία"
+          ],
+          "negative_names": [
+            "Αυξημένο\nάγχος σε\nαυτούς που\nδεν βρήκαν\nεργασία"
+          ],
+          "positive_impacts": [
+            {
+              "value": 1912.5,
+              "name": "Ικανοποίηση από\nτην εξεύρεση\nεργασίας"
+            },
+            {
+              "value": 75,
+              "name": "Βελτιωμένη ψυχική\nυγεία"
+            }
+          ],
+          "negative_impacts": [
+            {
+              "value": 157.5,
+              "name": "Αυξημένο\nάγχος σε\nαυτούς που\nδεν βρήκαν\nεργασία"
+            }
+          ],
+          "chartPositive": {
+            "tooltip": {
+              "show": false,
+              "trigger": "item",
+              "formatter": "{a} <br/>{b} : {c} ({d}%)"
+            },
+            "legend": {
+              "x": "center",
+              "y": "250",
+              "data": [
+                "Ικανοποίηση από\nτην εξεύρεση\nεργασίας",
+                "Βελτιωμένη ψυχική\nυγεία"
+              ]
+            },
+            "toolbox": {
+              "show": true,
+              "feature": {
+                "restore": {
+                  "show": true,
+                  "title": "Επαναφορά"
+                },
+                "saveAsImage": {
+                  "show": true,
+                  "title": "Αποθήκευση ως εικόνα"
+                }
+              }
+            },
+            "calculable": true,
+            "series": [
+              {
+                "name": "Radius model",
+                "type": "pie",
+                "radius": [
+                  20,
+                  80
+                ],
+                "center": [
+                  "50%",
+                  100
+                ],
+                "roseType": "radius",
+                "width": "100%",
+                "max": 40,
+                "itemStyle": {
+                  "normal": {
+                    "label": {
+                      "show": false
+                    },
+                    "labelLine": {
+                      "show": false
+                    }
+                  },
+                  "emphasis": {
+                    "label": {
+                      "show": true
+                    },
+                    "labelLine": {
+                      "show": true
+                    }
+                  }
+                },
+                "data": [
+                  {
+                    "value": 1912.5,
+                    "name": "Ικανοποίηση από\nτην εξεύρεση\nεργασίας"
+                  },
+                  {
+                    "value": 75,
+                    "name": "Βελτιωμένη ψυχική\nυγεία"
+                  }
+                ]
+              }
+            ]
+          },
+          "hasPositive": true,
+          "chartNegative": {
+            "tooltip": {
+              "show": false,
+              "trigger": "item",
+              "formatter": "{a} <br/>{b} : {c} ({d}%)"
+            },
+            "legend": {
+              "x": "center",
+              "y": "250",
+              "data": [
+                "Αυξημένο\nάγχος σε\nαυτούς που\nδεν βρήκαν\nεργασία"
+              ]
+            },
+            "toolbox": {
+              "show": false,
+              "feature": {
+                "restore": {
+                  "show": true,
+                  "title": "restore"
+                },
+                "saveAsImage": {
+                  "show": true,
+                  "title": "save as image"
+                }
+              }
+            },
+            "calculable": true,
+            "series": [
+              {
+                "name": "Radius model",
+                "type": "pie",
+                "radius": [
+                  20,
+                  80
+                ],
+                "center": [
+                  "50%",
+                  100
+                ],
+                "roseType": "radius",
+                "width": "100%",
+                "max": 40,
+                "itemStyle": {
+                  "normal": {
+                    "label": {
+                      "show": false
+                    },
+                    "labelLine": {
+                      "show": false
+                    }
+                  },
+                  "emphasis": {
+                    "label": {
+                      "show": true
+                    },
+                    "labelLine": {
+                      "show": true
+                    }
+                  }
+                },
+                "data": [
+                  {
+                    "value": 157.5,
+                    "name": "Αυξημένο\nάγχος σε\nαυτούς που\nδεν βρήκαν\nεργασία"
+                  }
+                ]
+              }
+            ]
+          },
+          "hasNegative": true,
+          "$$hashKey": "object:24"
+        },
+        {
+          "negative_impact": -700,
+          "positive_impact": 177.5,
+          "segment_members": 200,
+          "segment_title": "Γυναίκες 16-18 που ζουν σε αστικές περιοχές",
+          "_id": "5a9d0d432f2c460014557a78",
+          "actions": [
+            {
+              "action_years": 2,
+              "action_people": 20,
+              "action_measure_change": "Αυτοσχέδια κλίμακα 1-5",
+              "action_defined_outcome": "Ικανοποίηση από την εξεύρεση εργασίας",
+              "_id": "5a9d0d432f2c460014557a79",
+              "action_influence": "positive",
+              "action_others_contributed": "Οικογένεια",
+              "action_change_without": 0.25,
+              "action_others_contribution": 0.5,
+              "action_importance": 10,
+              "impact": 150
+            },
+            {
+              "action_years": 2,
+              "action_people": 280,
+              "action_measure_change": "Αυτοσχέδια κλίμακα 1-5",
+              "_id": "5a9d0fc52f2c460014557a89",
+              "action_defined_outcome": "Αυξημένο άγχος σε αυτούς που δεν βρήκαν εργασία",
+              "action_influence": "negative",
+              "action_others_contributed": "Οικογένεια",
+              "action_change_without": 0.5,
+              "action_others_contribution": 0.5,
+              "action_importance": 5,
+              "impact": -700
+            },
+            {
+              "action_years": 1,
+              "action_people": 110,
+              "action_measure_change": "Warwick-Edinburgh κλίμακα ψυχικής υγείας",
+              "_id": "5a9d0fc52f2c460014557a88",
+              "action_defined_outcome": "Βελτιωμένη ψυχική υγεία",
+              "action_influence": "positive",
+              "action_others_contributed": "Οικογένεια",
+              "action_change_without": 0.5,
+              "action_others_contribution": 0.75,
+              "action_importance": 2,
+              "impact": 27.5
+            }
+          ],
+          "action_inter_outcome": [
+            "Αυξημένη αυτοπεποίθηση για ανεύρεση εργασίας",
+            "Κοινωνικοποίηση συμμετεχόντων",
+            "Μειωμένος χρόνος για την οικογένεια"
+          ],
+          "action_output": [
+            "10 εκπαιδευτικές συνεδρίες και 2 νέες δεξιότητες"
+          ],
+          "action_title": [
+            "Εκπαιδευτικά Προγράμματα σε νέους ανέργους"
+          ],
+          "positive_names": [
+            "Ικανοποίηση από\nτην εξεύρεση\nεργασίας",
+            "Βελτιωμένη ψυχική\nυγεία"
+          ],
+          "negative_names": [
+            "Αυξημένο\nάγχος σε\nαυτούς που\nδεν βρήκαν\nεργασία"
+          ],
+          "positive_impacts": [
+            {
+              "value": 150,
+              "name": "Ικανοποίηση από\nτην εξεύρεση\nεργασίας"
+            },
+            {
+              "value": 27.5,
+              "name": "Βελτιωμένη ψυχική\nυγεία"
+            }
+          ],
+          "negative_impacts": [
+            {
+              "value": 700,
+              "name": "Αυξημένο\nάγχος σε\nαυτούς που\nδεν βρήκαν\nεργασία"
+            }
+          ],
+          "chartPositive": {
+            "tooltip": {
+              "show": false,
+              "trigger": "item",
+              "formatter": "{a} <br/>{b} : {c} ({d}%)"
+            },
+            "legend": {
+              "x": "center",
+              "y": "250",
+              "data": [
+                "Ικανοποίηση από\nτην εξεύρεση\nεργασίας",
+                "Βελτιωμένη ψυχική\nυγεία"
+              ]
+            },
+            "toolbox": {
+              "show": true,
+              "feature": {
+                "restore": {
+                  "show": true,
+                  "title": "Επαναφορά"
+                },
+                "saveAsImage": {
+                  "show": true,
+                  "title": "Αποθήκευση ως εικόνα"
+                }
+              }
+            },
+            "calculable": true,
+            "series": [
+              {
+                "name": "Radius model",
+                "type": "pie",
+                "radius": [
+                  20,
+                  80
+                ],
+                "center": [
+                  "50%",
+                  100
+                ],
+                "roseType": "radius",
+                "width": "100%",
+                "max": 40,
+                "itemStyle": {
+                  "normal": {
+                    "label": {
+                      "show": false
+                    },
+                    "labelLine": {
+                      "show": false
+                    }
+                  },
+                  "emphasis": {
+                    "label": {
+                      "show": true
+                    },
+                    "labelLine": {
+                      "show": true
+                    }
+                  }
+                },
+                "data": [
+                  {
+                    "value": 150,
+                    "name": "Ικανοποίηση από\nτην εξεύρεση\nεργασίας"
+                  },
+                  {
+                    "value": 27.5,
+                    "name": "Βελτιωμένη ψυχική\nυγεία"
+                  }
+                ]
+              }
+            ]
+          },
+          "hasPositive": true,
+          "chartNegative": {
+            "tooltip": {
+              "show": false,
+              "trigger": "item",
+              "formatter": "{a} <br/>{b} : {c} ({d}%)"
+            },
+            "legend": {
+              "x": "center",
+              "y": "250",
+              "data": [
+                "Αυξημένο\nάγχος σε\nαυτούς που\nδεν βρήκαν\nεργασία"
+              ]
+            },
+            "toolbox": {
+              "show": false,
+              "feature": {
+                "restore": {
+                  "show": true,
+                  "title": "restore"
+                },
+                "saveAsImage": {
+                  "show": true,
+                  "title": "save as image"
+                }
+              }
+            },
+            "calculable": true,
+            "series": [
+              {
+                "name": "Radius model",
+                "type": "pie",
+                "radius": [
+                  20,
+                  80
+                ],
+                "center": [
+                  "50%",
+                  100
+                ],
+                "roseType": "radius",
+                "width": "100%",
+                "max": 40,
+                "itemStyle": {
+                  "normal": {
+                    "label": {
+                      "show": false
+                    },
+                    "labelLine": {
+                      "show": false
+                    }
+                  },
+                  "emphasis": {
+                    "label": {
+                      "show": true
+                    },
+                    "labelLine": {
+                      "show": true
+                    }
+                  }
+                },
+                "data": [
+                  {
+                    "value": 700,
+                    "name": "Αυξημένο\nάγχος σε\nαυτούς που\nδεν βρήκαν\nεργασία"
+                  }
+                ]
+              }
+            ]
+          },
+          "hasNegative": true,
+          "$$hashKey": "object:25"
+        },
+        {
+          "negative_impact": -60,
+          "positive_impact": 1098.75,
+          "segment_members": 400,
+          "segment_title": "Γυναίκες 16-18 που ζουν σε αγροτικές περιοχές",
+          "_id": "5a9d0d432f2c460014557a76",
+          "actions": [
+            {
+              "action_years": 2,
+              "action_people": 180,
+              "action_measure_change": "Αυτοσχέδια κλίμακα 1-5",
+              "action_defined_outcome": "Ικανοποίηση από την εξεύρεση εργασίας",
+              "_id": "5a9d0d432f2c460014557a77",
+              "action_influence": "positive",
+              "action_others_contributed": "Οικογένεια και άλλοι οργανισμοί",
+              "action_change_without": 0.25,
+              "action_others_contribution": 0.5,
+              "action_importance": 8,
+              "impact": 1080
+            },
+            {
+              "action_years": 2,
+              "action_people": 20,
+              "action_measure_change": "Αυτοσχέδια κλίμακα 1-5",
+              "_id": "5a9d0fc52f2c460014557a87",
+              "action_defined_outcome": "Αυξημένο άγχος σε αυτούς που δεν βρήκαν εργασία",
+              "action_influence": "negative",
+              "action_others_contributed": "Οικογένεια και άλλοι οργανισμοί",
+              "action_change_without": 0.5,
+              "action_others_contribution": 0.5,
+              "action_importance": 6,
+              "impact": -60
+            },
+            {
+              "action_years": 1,
+              "action_people": 150,
+              "action_measure_change": "Warwick-Edinburgh κλίμακα ψυχικής υγείας",
+              "_id": "5a9d0fc52f2c460014557a86",
+              "action_defined_outcome": "Βελτιωμένη ψυχική υγεία",
+              "action_influence": "positive",
+              "action_others_contributed": "Οικογένεια και άλλοι οργανισμοί",
+              "action_change_without": 0.5,
+              "action_others_contribution": 0.75,
+              "action_importance": 1,
+              "impact": 18.75
+            }
+          ],
+          "action_inter_outcome": [
+            "Αυξημένη αυτοπεποίθηση για ανεύρεση εργασίας",
+            "Κοινωνικοποίηση συμμετεχόντων",
+            "Έμαθαν πώς να αντιμετωπίζουν καλύτερα τις καταστάσεις"
+          ],
+          "action_output": [
+            "10 εκπαιδευτικές συνεδρίες και 4 νέες δεξιότητες"
+          ],
+          "action_title": [
+            "Εκπαιδευτικά Προγράμματα σε νέους ανέργους"
+          ],
+          "positive_names": [
+            "Ικανοποίηση από\nτην εξεύρεση\nεργασίας",
+            "Βελτιωμένη ψυχική\nυγεία"
+          ],
+          "negative_names": [
+            "Αυξημένο\nάγχος σε\nαυτούς που\nδεν βρήκαν\nεργασία"
+          ],
+          "positive_impacts": [
+            {
+              "value": 1080,
+              "name": "Ικανοποίηση από\nτην εξεύρεση\nεργασίας"
+            },
+            {
+              "value": 18.75,
+              "name": "Βελτιωμένη ψυχική\nυγεία"
+            }
+          ],
+          "negative_impacts": [
+            {
+              "value": 60,
+              "name": "Αυξημένο\nάγχος σε\nαυτούς που\nδεν βρήκαν\nεργασία"
+            }
+          ],
+          "chartPositive": {
+            "tooltip": {
+              "show": false,
+              "trigger": "item",
+              "formatter": "{a} <br/>{b} : {c} ({d}%)"
+            },
+            "legend": {
+              "x": "center",
+              "y": "250",
+              "data": [
+                "Ικανοποίηση από\nτην εξεύρεση\nεργασίας",
+                "Βελτιωμένη ψυχική\nυγεία"
+              ]
+            },
+            "toolbox": {
+              "show": true,
+              "feature": {
+                "restore": {
+                  "show": true,
+                  "title": "Επαναφορά"
+                },
+                "saveAsImage": {
+                  "show": true,
+                  "title": "Αποθήκευση ως εικόνα"
+                }
+              }
+            },
+            "calculable": true,
+            "series": [
+              {
+                "name": "Radius model",
+                "type": "pie",
+                "radius": [
+                  20,
+                  80
+                ],
+                "center": [
+                  "50%",
+                  100
+                ],
+                "roseType": "radius",
+                "width": "100%",
+                "max": 40,
+                "itemStyle": {
+                  "normal": {
+                    "label": {
+                      "show": false
+                    },
+                    "labelLine": {
+                      "show": false
+                    }
+                  },
+                  "emphasis": {
+                    "label": {
+                      "show": true
+                    },
+                    "labelLine": {
+                      "show": true
+                    }
+                  }
+                },
+                "data": [
+                  {
+                    "value": 1080,
+                    "name": "Ικανοποίηση από\nτην εξεύρεση\nεργασίας"
+                  },
+                  {
+                    "value": 18.75,
+                    "name": "Βελτιωμένη ψυχική\nυγεία"
+                  }
+                ]
+              }
+            ]
+          },
+          "hasPositive": true,
+          "chartNegative": {
+            "tooltip": {
+              "show": false,
+              "trigger": "item",
+              "formatter": "{a} <br/>{b} : {c} ({d}%)"
+            },
+            "legend": {
+              "x": "center",
+              "y": "250",
+              "data": [
+                "Αυξημένο\nάγχος σε\nαυτούς που\nδεν βρήκαν\nεργασία"
+              ]
+            },
+            "toolbox": {
+              "show": false,
+              "feature": {
+                "restore": {
+                  "show": true,
+                  "title": "restore"
+                },
+                "saveAsImage": {
+                  "show": true,
+                  "title": "save as image"
+                }
+              }
+            },
+            "calculable": true,
+            "series": [
+              {
+                "name": "Radius model",
+                "type": "pie",
+                "radius": [
+                  20,
+                  80
+                ],
+                "center": [
+                  "50%",
+                  100
+                ],
+                "roseType": "radius",
+                "width": "100%",
+                "max": 40,
+                "itemStyle": {
+                  "normal": {
+                    "label": {
+                      "show": false
+                    },
+                    "labelLine": {
+                      "show": false
+                    }
+                  },
+                  "emphasis": {
+                    "label": {
+                      "show": true
+                    },
+                    "labelLine": {
+                      "show": true
+                    }
+                  }
+                },
+                "data": [
+                  {
+                    "value": 60,
+                    "name": "Αυξημένο\nάγχος σε\nαυτούς που\nδεν βρήκαν\nεργασία"
+                  }
+                ]
+              }
+            ]
+          },
+          "hasNegative": true,
+          "$$hashKey": "object:26"
+        }
+      ],
+      "postives": [
+        1098.75,
+        177.5,
+        1987.5,
+        588.75
+      ],
+      "negatives": [
+        -60,
+        -700,
+        -157.5,
+        -393.75
+      ],
+      "names": [
+        "Ομάδα 4",
+        "Ομάδα 3",
+        "Ομάδα 2",
+        "Ομάδα 1"
+      ],
+      "postives_per_people": [
+        2.94375,
+        9.9375,
+        0.8875,
+        2.746875
+      ],
+      "negatives_per_people": [
+        -1.96875,
+        -0.7875,
+        -3.5,
+        -0.15
+      ],
+      "chart": {
+        "tooltip": {
+          "show": false,
+          "trigger": "axis",
+          "axisPointer": {
+            "type": "shadow"
+          }
+        },
+        "legend": {
+          "data": [
+            "Θετικός Αντίκτυπος",
+            "Αρνητικός Αντίκτυπος"
+          ]
+        },
+        "toolbox": {
+          "show": true,
+          "feature": {
+            "restore": {
+              "show": true,
+              "title": "Επαναφορά"
+            },
+            "saveAsImage": {
+              "show": true,
+              "title": "Αποθήκευση ως εικόνα"
+            }
+          }
+        },
+        "calculable": true,
+        "xAxis": [
+          {
+            "type": "value",
+            "show": false
+          }
+        ],
+        "yAxis": [
+          {
+            "type": "category",
+            "axisTick": {
+              "show": false
+            },
+            "data": [
+              "Ομάδα 4",
+              "Ομάδα 3",
+              "Ομάδα 2",
+              "Ομάδα 1"
+            ]
+          }
+        ],
+        "series": [
+          {
+            "name": "Θετικός Αντίκτυπος",
+            "type": "bar",
+            "data": [
+              1098.75,
+              177.5,
+              1987.5,
+              588.75
+            ]
+          },
+          {
+            "name": "Αρνητικός Αντίκτυπος",
+            "type": "bar",
+            "data": [
+              -60,
+              -700,
+              -157.5,
+              -393.75
+            ]
+          }
+        ]
+      },
+      "$$hashKey": "object:18"
+    }
+  ],
+  "solutions": [
+    {
+      "_id": "5a9d0c832f2c460014557a6b",
+      "solution_title": "Εκπαιδευτικά προγράμματα για καλύτερη παρουσίαση και στοχευμένες εκπαιδεύσεις σε σύγχρονες δεξιότητες."
+    }
+  ],
+  "problems": [
+    {
+      "_id": "5a9d0c832f2c460014557a6a",
+      "problem_title": "Μεγαλύτερη αυτοπεποίθηση στην προσπάθεια ανεύρεσης εργασίας και περισσότερες δεξιότητες."
+    }
+  ],
+  "updated": "2018-03-26T12:12:47.063Z",
+  "created": "2018-03-26T09:24:46.515Z"
+}
