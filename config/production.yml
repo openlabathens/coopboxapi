@@ -1,4 +1,0 @@
-# RUN WITH NODE_ENV=production
-api:
-mongoDb: {uri: mongodb://socialtool:7Df!d0&da@ds251727.mlab.com:51727/heroku_t31b6b83}
-server: {name: socialtool-api.herokuapp.com, port: 8080}
