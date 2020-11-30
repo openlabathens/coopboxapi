@@ -6,8 +6,8 @@ const transactionSchema = new mongoose.Schema({
         ref: 'Coopbox',
         type: mongoose.Schema.Types.ObjectId,
     },*/
-    coopbox:{
-        type:String
+    coopbox: {
+        type: String
     },
     datetime: {
         type: Date,
