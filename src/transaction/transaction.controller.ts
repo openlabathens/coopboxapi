@@ -1,21 +1,39 @@
 import { Request, Response, Router } from 'express';
 import Controller from '../interfaces/controller.interface';
 import userModel from '../user/user.model';
+import transactionModel from '../transaction/transaction.model';
 
-class ReportController implements Controller {
+class TransactionController implements Controller {
   public path = '/report';
+  public pathTransactions = '/transactions';
   public router = Router();
-  private user = userModel;
+  private transaction = transactionModel;
 
   constructor() {
     this.initializeRoutes();
   }
 
   private initializeRoutes() {
-    this.router.get(`${this.path}`, this.generateReport);
+    //this.router.get(`${this.path}`, this.generateReport);
+    this.router.post(`${this.pathTransactions}/:id`, this.postTransactions );
   }
 
-  private generateReport = async (request: Request, response: Response) => {
+  private postTransactions = async (request: Request, response: Response) => {
+  
+    const CoopboxId = request.params.id;
+    const transactionData = request.body;
+    const createdTransaction = new this.transaction({
+      ...transactionData,
+      coopbox: CoopboxId,
+    });
+    console.log(createdTransaction);
+    const savedTransaction = await createdTransaction.save();
+    //await savedTransaction.populate().execPopulate();
+    response.send(savedTransaction);
+  }
+ 
+  
+  /* private generateReport = async (request: Request, response: Response) => {
     const usersByCountries = await this.user.aggregate(
       [
         {
@@ -66,8 +84,8 @@ class ReportController implements Controller {
     response.send({
       usersByCountries,
     });
-  }
+  }*/
 
 }
 
-export default ReportController;
+export default TransactionController ;
