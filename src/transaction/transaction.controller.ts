@@ -26,10 +26,10 @@ class TransactionController implements Controller {
       ...transactionData,
       coopbox: CoopboxId,
     });
-    console.log(createdTransaction);
     const savedTransaction = await createdTransaction.save();
     //await savedTransaction.populate().execPopulate();
-    response.send(savedTransaction);
+    //console.log(savedTransaction);
+    response.send(201);
   }
  
   
