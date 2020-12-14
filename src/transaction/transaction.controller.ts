@@ -26,20 +26,11 @@ class TransactionController implements Controller {
     const coopboxId = request.params.id;
     const transactionData = request.body;
 
-    var errorType = 'else';
-
     //Find Coopbox
-    const coopboxQuery = this.coopbox.findById(coopboxId);
+    const coopbox = await this.coopbox.findById(coopboxId);
 
-    try {
-      //If found continue
-      if (coopboxQuery != null) {
-        coopboxQuery.populate('coopbox').exec();
-      } else {
-        errorType = '404';
-      }
-      const coopbox = await coopboxQuery;
-
+    //If found continue
+    if (coopbox) {
       //Check if token exists
       if (bearerHeader) {
         const bearer = bearerHeader.split(' ');
@@ -54,15 +45,18 @@ class TransactionController implements Controller {
           const savedTransaction = await createdTransaction.save();
           response.sendStatus(201);
         } else {
-          errorType = '401';
+          next(new TransanctionNotCompletedException(coopboxId, '401'));
         }
       } else {
-        errorType = '404';
+        next(new TransanctionNotCompletedException(coopboxId, '401'));
       }
-
-    } catch {
-      next(new TransanctionNotCompletedException(coopboxId, errorType));
+    } else {
+      next(new TransanctionNotCompletedException(coopboxId, '404'));
     }
+
+
+
+
   }
 }
 
