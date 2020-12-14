@@ -1,9 +1,8 @@
 import { NextFunction, Request, Response, Router } from 'express';
 import Controller from '../interfaces/controller.interface';
-import userModel from '../user/user.model';
 import transactionModel from '../transaction/transaction.model';
 import coopboxModel from '../coopbox/coopbox.model';
-import CoopboxNotFoundException from '../exceptions/CoopboxNotFoundException';
+import TransanctionNotCompletedException from '../exceptions/TransanctionNotCompletedException';
 
 class TransactionController implements Controller {
   public path = '/report';
@@ -17,7 +16,6 @@ class TransactionController implements Controller {
   }
 
   private initializeRoutes() {
-    //this.router.get(`${this.path}`, this.generateReport);
     this.router.post(`${this.pathTransactions}/:id`, this.postTransactions);
   }
 
@@ -37,16 +35,12 @@ class TransactionController implements Controller {
           ...transactionData,
           coopbox: coopboxId,
         });
-        const savedTransaction = await createdTransaction.save();
         response.sendStatus(201);
       }
 
     } catch {
-      next(new CoopboxNotFoundException(coopboxId));
+      next(new TransanctionNotCompletedException(coopboxId));
     }
-
-
-
   }
 }
 
