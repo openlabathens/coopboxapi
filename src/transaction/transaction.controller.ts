@@ -51,7 +51,8 @@ class TransactionController implements Controller {
             ...transactionData,
             coopbox: coopboxId,
           });
-          response.send(createdTransaction);
+          const savedTransaction = await createdTransaction.save();
+          response.sendStatus(201);
         } else {
           errorType = '401';
         }

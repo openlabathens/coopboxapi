@@ -2,12 +2,9 @@ import * as mongoose from 'mongoose';
 import Transaction from './transaction.interface';
 
 const transactionSchema = new mongoose.Schema({
-    /*coopbox: {
+    coopbox: {
         ref: 'Coopbox',
         type: mongoose.Schema.Types.ObjectId,
-    },*/
-    coopbox: {
-        type: String
     },
     datetime: {
         type: Date,
