@@ -1,4 +1,5 @@
 interface Coopbox {
+    _id: string;
     token: string;
 }
 
