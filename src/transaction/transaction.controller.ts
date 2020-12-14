@@ -26,25 +26,26 @@ class TransactionController implements Controller {
     const coopboxId = request.params.id;
     const transactionData = request.body;
     const coopboxQuery = this.coopbox.findById(coopboxId);
-    
-    if (coopboxQuery != null) {
-      coopboxQuery.populate('coopbox').exec();
-    } else {
-      //response.sendStatus(404);
+
+    try {
+      if (coopboxQuery != null) {
+        coopboxQuery.populate('coopbox').exec();
+      }
+      const coopbox = await coopboxQuery;
+      if (coopbox.token === process.env.JWT_SECRET) {
+        const createdTransaction = new this.transaction({
+          ...transactionData,
+          coopbox: coopboxId,
+        });
+        const savedTransaction = await createdTransaction.save();
+        response.sendStatus(201);
+      }
+
+    } catch {
       next(new CoopboxNotFoundException(coopboxId));
-    };
-    const coopbox = await coopboxQuery;
-    if (coopbox.token === process.env.JWT_SECRET) {
-      //response.sendStatus(200);
-      const createdTransaction = new this.transaction({
-        ...transactionData,
-        coopbox: coopboxId,
-      });
-      const savedTransaction = await createdTransaction.save();
-      //await savedTransaction.populate().execPopulate();
-      //console.log(savedTransaction);
-      response.sendStatus(201);
     }
+
+
 
   }
 }
