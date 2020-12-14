@@ -20,17 +20,19 @@ class CoopboxController implements Controller {
     private getCoopboxById = async (request: Request, response: Response, next: NextFunction) => {
         const coopboxId = request.params.id
         const coopboxQuery = this.coopbox.findById(coopboxId);
-        if (coopboxQuery != null) {
-            coopboxQuery.populate('coopbox').exec();
-        } else {
-            response.sendStatus(404);
-            //next(new CoopboxNotFoundException(coopboxId));
+        try {
+            if (coopboxQuery != null) {
+                coopboxQuery.populate('coopbox').exec();
+            }
+            const coopbox = await coopboxQuery;
+            if (coopbox.token === process.env.JWT_SECRET) {
+                response.sendStatus(200);
+            }
+        } catch {
+            next(new CoopboxNotFoundException(coopboxId));
         };
-        const coopbox = await coopboxQuery;
-        if (coopbox.token === process.env.JWT_SECRET) {
-            response.sendStatus(200);
-        }
-        
+
+
     }
 }
 
