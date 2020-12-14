@@ -21,25 +21,46 @@ class TransactionController implements Controller {
 
   private postTransactions = async (request: Request, response: Response, next: NextFunction) => {
 
+    //Get data from request
+    const bearerHeader = request.headers['authorization'];
     const coopboxId = request.params.id;
     const transactionData = request.body;
+
+    var errorType = 'else';
+
+    //Find Coopbox
     const coopboxQuery = this.coopbox.findById(coopboxId);
 
     try {
+      //If found continue
       if (coopboxQuery != null) {
         coopboxQuery.populate('coopbox').exec();
+      } else {
+        errorType = '404';
       }
       const coopbox = await coopboxQuery;
-      if (coopbox.token === process.env.JWT_SECRET) {
-        const createdTransaction = new this.transaction({
-          ...transactionData,
-          coopbox: coopboxId,
-        });
-        response.sendStatus(201);
+
+      //Check if token exists
+      if (bearerHeader) {
+        const bearer = bearerHeader.split(' ');
+        const bearerToken = bearer[1];
+        //Check if token is right
+        if (coopbox.token === bearerToken) {
+          //If all ok store transaction
+          const createdTransaction = new this.transaction({
+            ...transactionData,
+            coopbox: coopboxId,
+          });
+          response.send(createdTransaction);
+        } else {
+          errorType = '401';
+        }
+      } else {
+        errorType = '404';
       }
 
     } catch {
-      next(new TransanctionNotCompletedException(coopboxId));
+      next(new TransanctionNotCompletedException(coopboxId, errorType));
     }
   }
 }
