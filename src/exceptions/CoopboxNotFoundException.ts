@@ -2,7 +2,7 @@ import HttpException from "./HttpException";
 
 class CoopboxNotFoundException extends HttpException {
     constructor(id: string) {
-        super(404, `Coopbox with ${id} not found`);
+        super(404, `Coopbox with id: ${id} not found`);
     }
 }
 
