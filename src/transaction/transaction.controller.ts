@@ -27,8 +27,10 @@ class TransactionController implements Controller {
     const transactionData = request.body;
 
     //Find Coopbox
+    console.log(coopboxId);
     const coopbox = await this.coopbox.findById(coopboxId);
-
+    console.log(coopbox);
+    
     //If found continue
     if (coopbox) {
       //Check if token exists

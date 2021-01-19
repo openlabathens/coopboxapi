@@ -14,9 +14,14 @@ class CoopboxController implements Controller {
     }
 
     private initializeRoutes() {
+        //this.router.get(`${this.path}/all`, this.getAllCoopbox);
         this.router.get(`${this.path}/:id`, this.getCoopboxById);
     }
 
+    /*private getAllCoopbox = async (request: Request, response: Response, next: NextFunction) => {
+
+    }*/
+    
     private getCoopboxById = async (request: Request, response: Response, next: NextFunction) => {
         const coopboxId = request.params.id
         const coopboxQuery = this.coopbox.findById(coopboxId);
@@ -25,9 +30,7 @@ class CoopboxController implements Controller {
                 coopboxQuery.populate('coopbox').exec();
             }
             const coopbox = await coopboxQuery;
-            if (coopbox.token === process.env.JWT_SECRET) {
-                response.sendStatus(200);
-            }
+            response.send(coopbox);
         } catch {
             next(new CoopboxNotFoundException(coopboxId));
         };
