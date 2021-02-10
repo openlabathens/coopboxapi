@@ -27,9 +27,7 @@ class TransactionController implements Controller {
     const transactionData = request.body;
 
     //Find Coopbox
-    console.log(coopboxId);
     const coopbox = await this.coopbox.findById(coopboxId);
-    console.log(coopbox);
     
     //If found continue
     if (coopbox) {
@@ -39,7 +37,12 @@ class TransactionController implements Controller {
         const bearerToken = bearer[1];
         //Check if token is right
         if (coopbox.token === bearerToken) {
-          //If all ok store transaction
+          //Process transaction for date
+          transactionData.datetime = this.unixToISO(transactionData.datetime);
+          for (let transaction of transactionData.transactions) {
+            transaction.datetime = this.unixToISO(transaction.datetime);
+          }
+          //Store transaction
           const createdTransaction = new this.transaction({
             ...transactionData,
             coopbox: coopboxId,
@@ -55,10 +58,12 @@ class TransactionController implements Controller {
     } else {
       next(new TransanctionNotCompletedException(coopboxId, '404'));
     }
+  }
 
-
-
-
+  private unixToISO(unix:number){
+    const milliseconds = unix * 1000 
+    const isoDate =  new Date(milliseconds).toISOString();
+    return isoDate ;
   }
 }
 
